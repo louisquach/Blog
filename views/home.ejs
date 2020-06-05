@@ -1,0 +1,14 @@
+<%- include("partials/header.ejs");-%>
+<div class="">
+  <h1><%=pageName%></h1>
+  <p><%= paragraph1 %></p>
+</div>
+<hr />
+<h3>All Posts</h2>
+<div class="newPosts">
+  <%newPost.forEach(function(newPosttitle){%>
+  <h4 class="post"><%= newPosttitle.title %></h4>
+  <p class="postPage"><%= newPosttitle.content.substring(0,100)%>...<a class="readme" href='/posts/<%=newPosttitle.title%>'>Read More</a>%></p>
+<%})%>
+</div>
+<%- include("partials/footer.ejs"); -%>
